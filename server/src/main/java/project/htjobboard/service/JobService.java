@@ -20,6 +20,10 @@ public class JobService {
         this.jobRepository = jobRepository;
     }
 
+    public void deleteAllJobs() {
+        jobRepository.deleteAll();
+    }
+
     public void createDummyJob() {
         Job job = new Job();
         job.setTitle("Software Engineer");

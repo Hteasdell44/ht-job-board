@@ -1,0 +1,14 @@
+#home-pagination button {
+
+    border-radius: 1.5rem;
+    padding: 3%;
+    background-color: #6EE7B7;
+}
+
+@media screen and (min-width: 992px) {
+
+    #home-pagination button {
+
+        padding: 1.75%;
+    }
+}

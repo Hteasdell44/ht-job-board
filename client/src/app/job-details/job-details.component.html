@@ -1,0 +1,48 @@
+<div class="min-h-screen flex flex-col gap-8">
+
+    <div class="flex flex-col gap-2 text-center pt-8">
+
+        <h1 class="text-xl font-bold"> {{currentJob?.title}} </h1>
+        <h2> {{currentCompany?.name}}</h2>
+        <h2> {{currentJob?.location }} </h2>
+        <h2> ${{currentJob && formatSalary(currentJob.salary)}} </h2>
+    
+    </div>
+
+    <div class="text-center">
+        <h3 class="font-bold lg:mt-8">Minimum Requirements</h3>
+        <ul class="flex flex-col gap-4">
+            <li class="mt-4">Requirement #1</li>
+            <li>Requirement #2</li>
+            <li>Requirement #3</li>
+            <li>Requirement #4</li>
+            <li>Requirement #5</li>
+        </ul>
+    </div>
+
+    <div class="text-center">
+        <h3 class="font-bold lg:mt-8">Job Responsibilities</h3>
+
+        <p *ngIf="currentJob?.description; else company;" class="w-5/6 block m-auto ">{{ currentJob?.description }}</p>
+
+        <ng-template #company>
+
+            <p class="w-5/6 block m-auto ">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac felis nibh. Sed id lacinia lectus. Proin bibendum lorem sit amet mi ultricies, eu sagittis tortor feugiat. Aliquam erat volutpat. Cras luctus, est id ullamcorper interdum, nisi lacus ultricies nunc, ut commodo lacus magna sed purus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer vitae sem eu dui pellentesque scelerisque. Nullam eleifend nunc vel justo fringilla, eget tincidunt turpis malesuada. Aliquam ac sollicitudin ligula. Vestibulum sed finibus dui. Donec interdum euismod odio, vel rhoncus ipsum tempor nec. Vestibulum elementum est a sollicitudin condimentum. Vestibulum tempus erat ut lectus efficitur, id pellentesque ex hendrerit. </p>
+    
+        </ng-template>
+
+
+    </div>
+
+    <div class="flex flex-row gap-8 justify-center mb-6 lg:mt-8">
+        <button (click)="handleApplyClick()">Apply Now ✉️</button>
+
+        <!-- href="/jobs/{{currentJob?.id}}/apply" -->
+
+        <button (click)="handleWishListClick()">Save To List ❤️</button>
+
+    </div>
+
+    <p *ngIf="addedToWishList" class="text-center mb-4 pb-8"> {{addedToWishList}} </p>
+
+</div>

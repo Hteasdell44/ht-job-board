@@ -1,0 +1,30 @@
+<div class="min-h-screen flex flex-col items-center pb-8">
+    <h1 class="text-xl font-bold mt-8"> Let's Prepare Your Application! </h1>
+
+    <h2 class="mt-2">First, Let's Start With The Basics</h2>
+
+    <form class="w-4/5 flex flex-col gap-2" #form="ngForm" (ngSubmit)="sendEmail(form)">
+        <input placeholder="Email Address..."  name="email" [(ngModel)]="email" required/>
+        <input placeholder="Phone Number..."  name="phone" [(ngModel)]="phone" required/>
+        <input placeholder="Home Address..." name="address" [(ngModel)]="address" required/>
+        <input placeholder="City..." name="city" [(ngModel)]="city" required/>
+        <input placeholder="State..." name="state" [(ngModel)]="state" required/>
+
+        <h1 class="text-center text-xl mt-8 font-bold">Next, We'll Need Your: </h1>
+
+        
+        <h3 class="text-center">Resume</h3>
+        <input id="file-input" type="file" accept=".pdf, .doc, .docx, .txt" name="resume" [(ngModel)]="resume" (change)="onFileSelected($event)" required>
+        
+        <h1 class="text-center text-xl mt-4 font-bold">And Your: </h1>
+
+        <h3 class="text-center">Cover Letter</h3>
+        <input id="file-input" type="file" accept=".pdf, .doc, .docx, .txt" name="coverLetter" [(ngModel)]="coverLetter" (change)="onFileSelected($event)" required>
+
+        <button class="mt-8 p-4 bg-green-300 rounded-3xl mt-6 font-bold" type="submit">Submit Application ☑️</button>
+
+    </form>
+
+    <p *ngIf="appSubmitted" class="text-center mt-8 pb-8"> {{appSubmitted}} </p>
+
+</div>

@@ -1,6 +1,7 @@
 package project.htjobboard.model;
 
 import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "job")
@@ -10,6 +11,10 @@ public class Job {
     private String title;
     private double salary;
     private String location;
+    private String description;
+
+    @DBRef
+    private Company company;
 
     public Job() {
     }
@@ -42,8 +47,8 @@ public class Job {
         return salary;
     }
 
-    public void setSalary(double salary) {
-        this.salary = salary;
+    public void setSalary(double salary2) {
+        this.salary = salary2;
     }
 
     public String getLocation() {
@@ -52,6 +57,18 @@ public class Job {
 
     public void setLocation(String location) {
         this.location = location;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String jobDescription) {
+        this.description = jobDescription;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 
 }
