@@ -1,0 +1,21 @@
+<div class="min-h-screen flex flex-col items-center pb-8">
+    <h1 class="text-xl font-bold mt-8"> {{currentCompany.name}} </h1>
+    <h2 class="mt-4 mb-4">Contact: {{currentCompany.email}}</h2>
+
+    <div *ngFor="let job of currentCompany.jobListings" class="w-4/5 block m-auto">
+
+        <a href="/jobs/{{ job.id }}" class="w-full block m-auto rounded-3xl text-center border-2 border-black mb-4 bg-gray-200 p-4">
+            <h3 class="font-bold">{{ job.title }}</h3>
+            <p>${{ formatSalary(job.salary) }}</p>
+            <p>📍{{ job.location }}</p>
+        </a>
+        
+
+    </div>
+
+    <div class="w-full flex flex-row justify-center gap-16 mb-4" id="home-pagination">
+        <button (click)="previousPage()">&#x2190; Back</button>
+        <button (click)="nextPage()">Next &#x2192;</button>
+    </div>
+
+</div>

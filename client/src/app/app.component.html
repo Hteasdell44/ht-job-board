@@ -1,12 +1,16 @@
 <!-- Navbar -->
 
-<div >
+<div>
 
   <nav class="w-screen bg-gray-200" role="banner">
-    <img class="w-5/6 block m-auto" alt="HT Jobs Logo" [src]="logoPath" />
+
+    <a href="/">
+      <img class="w-5/6 block m-auto lg:w-2/6" alt="HT Jobs Logo" [src]="logoPath" />
+    </a>
+
   </nav>
 
-  <app-home></app-home>
+  <router-outlet></router-outlet>
 
   <!-- Footer -->
 
@@ -14,10 +18,10 @@
 
     <ul class="flex flex-col">
       <h1 class="text-2xl mb-2">Quick Links</h1>
-      <a>Browse Jobs</a>
-      <a>Browse Companies</a>
-      <a>Post A Job</a>
-      <a>View Account</a>
+      <a href="">Browse Jobs</a>
+      <a href="/companies">Browse Companies</a>
+      <button (click)="handleJobPostClick()">Post A Job</button>
+      <button (click)="handleAccountClick()">View Account</button>
     </ul>
 
     <h2>© 2023 HT Jobs</h2>
@@ -26,4 +30,4 @@
 
 </div>
 
-<router-outlet></router-outlet>
+

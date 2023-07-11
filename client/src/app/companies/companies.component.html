@@ -1,0 +1,26 @@
+<div class="min-h-screen text-center flex flex-col items-center gap-8">
+            
+      <h1 class="w-4/5 mt-4 text-2xl font-bold">Check Out The Companies Hiring On HT Jobs!</h1>
+
+      <form #form="ngForm" (ngSubmit)="onSubmit(form)" class="w-4/5">
+            <input class="w-full text-center border-2 border-black p-4 rounded-3xl" placeholder="Company (ex: Apple)" name="companyName" [(ngModel)]="companyName"/>
+            <button class="w-full p-4 bg-green-300 rounded-3xl mt-6 font-bold" type="submit">Search</button>
+      </form>
+
+      <h1 class="w-4/5 mt-4 text-2xl font-bold">{{secondTitle}}</h1>
+
+      <div *ngFor="let company of getPageItems()" class="w-4/5 block m-auto">
+
+            <a href="/company/{{company.id}}" class="w-full block m-auto rounded-3xl text-center border-2 border-black mb-4 bg-gray-200 p-4">
+                <h3 class="font-bold">{{ company.name }}</h3>
+            </a>
+            
+    
+        </div>
+
+        <div class="w-full flex flex-row justify-center gap-16 mb-4" id="home-pagination">
+            <button (click)="previousPage()">&#x2190; Back</button>
+            <button (click)="nextPage()">Next &#x2192;</button>
+        </div>
+  
+</div>

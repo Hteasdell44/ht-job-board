@@ -1,15 +1,33 @@
 <div class="min-h-screen">
 
-    <form class="flex flex-col items-center">
+    <form #form="ngForm" (ngSubmit)="onSubmit(form)"  class="flex flex-col items-center">
 
-
-        <h1 class="mt-4 text-2xl">Let's Find Your Dream Job!</h1>
-        <input class="text-center" placeholder="Job Title (ex: Software Developer)" />
-        <input placeholder="Location (ex: Charlotte, NC)" />
-        <button class="w-4/5 p-4 bg-green-300 rounded-3xl mt-6 font-bold">Search</button>
+        <h1 class="mt-4 text-2xl font-bold">Let's Find Your Dream Job!</h1>
+        <input class="text-center" name="jobTitle" [(ngModel)]="jobTitle" placeholder="Job Title (ex: Software Developer)" id="jobTitle-input" required />
+        <input name="location" [(ngModel)]="location" placeholder="Location (ex: Charlotte, NC)" required />
+        <button class="w-4/5 p-4 bg-green-300 rounded-3xl mt-6 font-bold" type="submit">Search</button>
+        
+        <div *ngIf="form.submitted && (form.controls['jobTitle'].invalid || form.controls['location'].invalid)" class="text-red-500 mt-2">Both fields are required.</div>
 
     </form>
+      
 
-    <button (click)="getAllJobs()" >Click</button>
+    <h1 class="mt-8 mb-8 text-2xl text-center font-bold">{{secondTitle}}</h1>
+
+    <div *ngFor="let job of getPageItems()" class="w-4/5 block m-auto">
+
+        <a href="/jobs/{{ job.id }}" class="w-full block m-auto rounded-3xl text-center border-2 border-black mb-4 bg-gray-200 p-4">
+            <h3 class="font-bold">{{ job.title }}</h3>
+            <p>${{ formatSalary(job.salary) }}</p>
+            <p>📍{{ job.location }}</p>
+        </a>
+        
+
+    </div>
+
+    <div class="flex flex-row justify-center gap-16 mb-4" id="home-pagination">
+        <button (click)="previousPage()">&#x2190; Back</button>
+        <button (click)="nextPage()">Next &#x2192;</button>
+    </div>
 
 </div>

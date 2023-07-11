@@ -1,0 +1,14 @@
+form input, textarea {
+
+    border: 2px solid black;
+    width: 100%;
+    margin-top: 4vh;
+    padding: 1vh;
+    border-radius: 1.5rem;
+}
+
+textarea {
+
+    height: 20vh;
+    padding: 1vh;
+}

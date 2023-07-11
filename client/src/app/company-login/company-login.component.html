@@ -1,0 +1,25 @@
+<div class="min-h-screen text-center flex flex-col items-center gap-8 justify-center">
+
+    <ng-container *ngIf="this.bool == true; else company">
+                
+        <h1 class="text-2xl font-bold">You Must Log Out Of Your Applicant Account To Post A Job Listing!</h1>
+
+        <button class="w-4/5 p-4 bg-green-300 rounded-3xl mt-6 mb-8 font-bold" (click)="logout()">Logout</button>
+
+    </ng-container>
+
+    <ng-template #company>
+
+        <form #form="ngForm" (ngSubmit)="onSubmit(form)" class="w-2/3 flex flex-col items-center mb-32">
+
+            <h1 class="text-2xl font-bold">Login To Your Company Account Below To Get Started!</h1>
+            <input name="email" [(ngModel)]="email" placeholder="Email Address"/>
+            <input type="password" name="password"  [(ngModel)]="password" placeholder="Password"/>
+            <button class="w-4/5 p-4 bg-green-300 rounded-3xl mt-6 font-bold" type="submit">Login</button>
+            <a href="company/signup" class="mt-6 font-bold underline">Or, Click Here To Sign Your Company Up!</a>
+    
+        </form>
+
+    </ng-template>
+
+</div>

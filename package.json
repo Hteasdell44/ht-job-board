@@ -4,7 +4,7 @@
   "description": "A job board app that connects employers with applicants.",
   "main": "index.js",
   "scripts": {
-    "develop": "cd server && mvn spring-boot:run & cd ../client && ng serve"
+    "develop": "cd server && mvn spring-boot:run & cd client && ng serve"
   },
   "keywords": [],
   "author": "",

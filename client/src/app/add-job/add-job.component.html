@@ -1,0 +1,26 @@
+<div class="min-h-screen flex flex-col items-center pb-8">
+    <h1 class="text-xl font-bold mt-8"> Let's Prepare Your Job Posting! </h1>
+
+    <h2 class="mt-2">First, Let's Start With The Basics</h2>
+
+    <form class="w-4/5 flex flex-col gap-2" #form="ngForm" (ngSubmit)="handleFormSubmit(form)">
+
+        <input placeholder="Job Title..."  name="jobTitle" [(ngModel)]="jobTitle" required/>
+        <input type="number" placeholder="Salary..."  name="salary" [(ngModel)]="salary" required/>
+        <input placeholder="City..." name="city" [(ngModel)]="city" required/>
+
+        <h1 class="text-center text-xl mt-8 font-bold">Next, Tell Us About The Position: </h1>
+
+        
+        <h3 class="text-center">Job Responsibilities</h3>
+        <textarea name="jobDescription" [(ngModel)]="jobDescription" required></textarea>
+        
+        <button class="mt-8 p-4 bg-green-300 rounded-3xl mt-6 font-bold" type="submit">Upload Job ☑️</button>
+
+        <div *ngIf="form.submitted && (form.controls['jobTitle'].invalid || form.controls['salary'].invalid || form.controls['city'].invalid || form.controls['jobDescription'].invalid)" class="text-red-500 mt-2">All fields are required.</div>
+
+    </form>
+
+    <p *ngIf="appSubmitted" class="text-center mt-8 pb-8"> {{appSubmitted}} </p>
+
+</div>
