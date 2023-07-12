@@ -41,6 +41,7 @@ export class AddJobComponent {
   handleFormSubmit(form: any) {
 
     if (form.invalid) {
+      console.log('');
         return; // Don't proceed if the form is invalid
     }
 
