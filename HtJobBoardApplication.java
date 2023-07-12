@@ -31,7 +31,7 @@ public class HtJobBoardApplication {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(HtJobBoardApplication.class, args);
+        SpringApplication.run(HtJobBoardApplication.class);
     }
 	
     @PostConstruct
