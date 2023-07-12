@@ -9,17 +9,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 import com.github.javafaker.Faker;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.apache.commons.io.IOUtils;
 
 @Service
 public class CompanyService {
@@ -38,9 +37,8 @@ public class CompanyService {
 
     public void seedCompanies() {
         try {
-
             InputStream inputStream = getClass().getClassLoader().getResourceAsStream("companyData.json");
-            String json = new String(inputStream.readAllBytes());
+            String json = new String(IOUtils.toByteArray(inputStream), StandardCharsets.UTF_8);
 
             // Parse the JSON data into a list of Company objects
             ObjectMapper objectMapper = new ObjectMapper();
@@ -87,4 +85,3 @@ public class CompanyService {
         return jobs;
     }
 }
-

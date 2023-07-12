@@ -1,6 +1,5 @@
 /Users/4keem/Desktop/code/portfolio/portfolio-projects/ht-job-board/server/src/main/java/project/htjobboard/utils/JwtUtil.java
 /Users/4keem/Desktop/code/portfolio/portfolio-projects/ht-job-board/server/src/main/java/project/htjobboard/model/Applicant.java
-/Users/4keem/Desktop/code/portfolio/portfolio-projects/ht-job-board/server/src/main/java/project/htjobboard/config/CustomWebConfig.java
 /Users/4keem/Desktop/code/portfolio/portfolio-projects/ht-job-board/server/src/main/java/project/htjobboard/model/Company.java
 /Users/4keem/Desktop/code/portfolio/portfolio-projects/ht-job-board/server/src/main/java/project/htjobboard/service/CompanyService.java
 /Users/4keem/Desktop/code/portfolio/portfolio-projects/ht-job-board/server/src/main/java/project/htjobboard/repository/ApplicantRepository.java

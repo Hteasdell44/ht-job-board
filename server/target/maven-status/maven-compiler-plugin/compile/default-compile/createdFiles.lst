@@ -1,6 +1,5 @@
 project/htjobboard/controller/JobController.class
 project/htjobboard/HtJobBoardApplication.class
-project/htjobboard/config/CustomWebConfig.class
 project/htjobboard/service/CompanyService.class
 project/htjobboard/repository/ApplicantRepository.class
 project/htjobboard/service/JobService.class
