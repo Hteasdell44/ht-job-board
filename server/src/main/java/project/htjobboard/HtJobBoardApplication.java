@@ -31,6 +31,15 @@ public class HtJobBoardApplication {
     }
 
     public static void main(String[] args) {
+
+        String port = System.getenv("PORT");
+
+        if (port == null || port.isEmpty()) {
+            port = "3001";
+        }
+
+        System.setProperty("server.port", port);
+
         SpringApplication.run(HtJobBoardApplication.class, args);
     }
 	
