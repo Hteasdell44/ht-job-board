@@ -7,9 +7,9 @@
           <div *ngFor="let item of wishList" class="w-4/5 rounded-3xl border-2 border-black p-4 bg-gray-200 relative">
 
                 <a href="/jobs/{{ item.id }}" class="w-full h-full rounded-3xl p-4 relative">
-                        <h2 class="font-bold">{{ item.title }}</h2>
-                        <h2> ${{ formatSalary(item.salary) }} </h2>
-                        <h2> 📍{{item.location}} </h2>
+                        <h2 class="font-bold md:text-2xl">{{ item.title }}</h2>
+                        <h2 class="md:text-xl"> ${{ formatSalary(item.salary) }} </h2>
+                        <h2 class="md:text-xl"> 📍{{item.location}} </h2>
                 </a>
 
                 <button class="z-10 absolute top-0 right-0 mt-2 mr-2" (click)="removeFromWishList(item); $event.stopPropagation(); ">❌</button>
