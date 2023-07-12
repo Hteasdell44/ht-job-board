@@ -1,0 +1,7 @@
+{
+    "root": "dist/view/",
+    "clean_urls": false,
+    "routes": {
+      "/**": "index.html"
+    }
+  }
