@@ -64,7 +64,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<version>2.5.4</version>
 				<configuration>
-                <mainClass>project.htjobboard.HtJobBoardApplication</mainClass>
+                <mainClass>project.htjobboard.HtJobBoardApplication.java</mainClass>
             </configuration>
 			</plugin>
 		</plugins>
