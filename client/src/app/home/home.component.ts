@@ -29,7 +29,7 @@ export class HomeComponent {
 
   constructor(private http: HttpClient, private decimalPipe: DecimalPipe, private formBuilder: FormBuilder) {
 
-    this.http.get<any[]>('https://ht-jobs-4a553258d208.herokuapp.com/jobs').subscribe(response => {
+    this.http.get<any[]>('/jobs').subscribe(response => {
       this.jobs = response;
     });
 
@@ -55,7 +55,7 @@ export class HomeComponent {
     if (location != '') { params = params.append('location', location); }
     
     
-    this.http.get<any[]>('https://ht-jobs-4a553258d208.herokuapp.com/jobs/search', { params }).subscribe((data) => {
+    this.http.get<any[]>('/jobs/search', { params }).subscribe((data) => {
       // Process the response data
       this.jobs = data;
       this.secondTitle = "Search Results";

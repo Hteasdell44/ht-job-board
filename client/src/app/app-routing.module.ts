@@ -15,7 +15,7 @@ import { CompanyDetailsComponent } from './company-details/company-details.compo
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'https://ht-jobs-4a553258d208.herokuapp.com/signup', component: ApplicantSignupComponent },
+  { path: 'signup', component: ApplicantSignupComponent },
   { path: 'login', component: ApplicantLoginComponent },
   { path: 'profile', component: ProfileComponent },    
   { path: 'jobs/:id', component: JobDetailsComponent },
