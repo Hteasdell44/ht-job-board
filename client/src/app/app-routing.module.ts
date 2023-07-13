@@ -14,18 +14,18 @@ import { AddJobComponent } from './add-job/add-job.component';
 import { CompanyDetailsComponent } from './company-details/company-details.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'signup', component: ApplicantSignupComponent },
-  { path: 'login', component: ApplicantLoginComponent },
-  { path: 'profile', component: ProfileComponent },    
-  { path: 'jobs/:id', component: JobDetailsComponent },
-  { path: 'jobs/:id/apply', component: ApplicationComponent },
-  { path: 'companies', component: CompaniesComponent },
-  { path: 'company/login', component: CompanyLoginComponent },
-  { path: 'company/signup', component: CompanySignupComponent },
-  { path: 'company/profile', component: CompanyProfileComponent },
-  { path: 'company/addJob', component: AddJobComponent },
-  { path: 'company/:id', component: CompanyDetailsComponent },
+  { path: 'https://ht-jobs-4a553258d208.herokuapp.com/', component: HomeComponent },
+  { path: 'https://ht-jobs-4a553258d208.herokuapp.com/signup', component: ApplicantSignupComponent },
+  { path: 'https://ht-jobs-4a553258d208.herokuapp.com/login', component: ApplicantLoginComponent },
+  { path: 'https://ht-jobs-4a553258d208.herokuapp.com/profile', component: ProfileComponent },    
+  { path: 'https://ht-jobs-4a553258d208.herokuapp.com/jobs/:id', component: JobDetailsComponent },
+  { path: 'https://ht-jobs-4a553258d208.herokuapp.com/jobs/:id/apply', component: ApplicationComponent },
+  { path: 'https://ht-jobs-4a553258d208.herokuapp.com/companies', component: CompaniesComponent },
+  { path: 'https://ht-jobs-4a553258d208.herokuapp.com/company/login', component: CompanyLoginComponent },
+  { path: 'https://ht-jobs-4a553258d208.herokuapp.com/company/signup', component: CompanySignupComponent },
+  { path: 'https://ht-jobs-4a553258d208.herokuapp.com/company/profile', component: CompanyProfileComponent },
+  { path: 'https://ht-jobs-4a553258d208.herokuapp.com/company/addJob', component: AddJobComponent },
+  { path: 'https://ht-jobs-4a553258d208.herokuapp.com/company/:id', component: CompanyDetailsComponent },
   
   
   
