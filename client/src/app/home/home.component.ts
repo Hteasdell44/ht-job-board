@@ -55,7 +55,7 @@ export class HomeComponent {
     if (location != '') { params = params.append('location', location); }
     
     
-    this.http.get<any[]>('http://localhost:3001/jobs/search', { params }).subscribe((data) => {
+    this.http.get<any[]>('https://ht-jobs-4a553258d208.herokuapp.com/jobs/search', { params }).subscribe((data) => {
       // Process the response data
       this.jobs = data;
       this.secondTitle = "Search Results";
