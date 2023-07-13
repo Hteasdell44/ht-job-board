@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: project.htjobboard.HtJobBoardApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.071 s - in project.htjobboard.HtJobBoardApplicationTests
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.12 s - in project.htjobboard.HtJobBoardApplicationTests

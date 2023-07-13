@@ -15,6 +15,8 @@ import { CompanyDetailsComponent } from './company-details/company-details.compo
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'dummy', component: HomeComponent },
+
   { path: 'signup', component: ApplicantSignupComponent },
   { path: 'login', component: ApplicantLoginComponent },
   { path: 'profile', component: ProfileComponent },    
