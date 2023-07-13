@@ -14,8 +14,9 @@ import { AddJobComponent } from './add-job/add-job.component';
 import { CompanyDetailsComponent } from './company-details/company-details.component';
 
 const routes: Routes = [
-  { path: '/', component: HomeComponent },
-  { path: '/signup', component: ApplicantSignupComponent },
+  { path: '', component: HomeComponent },
+  { path: 'dummy', component: ApplicantLoginComponent },
+  { path: 'signup', component: ApplicantSignupComponent },
   { path: 'login', component: ApplicantLoginComponent },
   { path: 'profile', component: ProfileComponent },    
   { path: 'jobs/:id', component: JobDetailsComponent },

@@ -1,12 +1,12 @@
 project/htjobboard/controller/JobController.class
-project/htjobboard/HtJobBoardApplication.class
 project/htjobboard/service/CompanyService.class
-project/htjobboard/repository/ApplicantRepository.class
 project/htjobboard/service/JobService.class
-project/htjobboard/repository/JobRepository.class
-project/htjobboard/model/Job.class
 project/htjobboard/utils/JwtUtil.class
 project/htjobboard/repository/CompanyRepository.class
+project/htjobboard/HtJobBoardApplication.class
+project/htjobboard/repository/ApplicantRepository.class
+project/htjobboard/repository/JobRepository.class
+project/htjobboard/model/Job.class
 project/htjobboard/controller/CompanyController.class
 project/htjobboard/model/Company.class
 project/htjobboard/model/Applicant.class
