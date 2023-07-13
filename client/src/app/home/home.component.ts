@@ -29,7 +29,7 @@ export class HomeComponent {
 
   constructor(private http: HttpClient, private decimalPipe: DecimalPipe, private formBuilder: FormBuilder) {
 
-    this.http.get<any[]>('http://ht-jobs-4a553258d208.herokuapp.com/jobs').subscribe(response => {
+    this.http.get<any[]>('https://ht-jobs-4a553258d208.herokuapp.com/jobs').subscribe(response => {
       this.jobs = response;
     });
 
