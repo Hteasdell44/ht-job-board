@@ -20,9 +20,15 @@ public class MvcConfiguration implements WebMvcConfigurer {
                     @Override
                     protected Resource getResource(String resourcePath, Resource location) throws IOException {
                         Resource requestedResource = location.createRelative(resourcePath);
- 
-                        return requestedResource.exists() && requestedResource.isReadable() ? requestedResource
-                                : new ClassPathResource("/static/index.html");
+
+                        if (requestedResource.exists() && requestedResource.isReadable()) {
+                            return requestedResource;
+                        } else if (resourcePath.startsWith("/company/") || resourcePath.startsWith("/jobs/")) {
+                            // Handle specific routes with multiple slashes
+                            return new ClassPathResource("/static/index.html");
+                        } else {
+                            return null;
+                        }
                     }
                 });
     }
