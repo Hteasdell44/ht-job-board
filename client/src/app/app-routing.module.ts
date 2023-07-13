@@ -26,9 +26,6 @@ const routes: Routes = [
   { path: 'company/profile', component: CompanyProfileComponent },
   { path: 'company/addJob', component: AddJobComponent },
   { path: 'company/:id', component: CompanyDetailsComponent },
-  
-  
-  
 ];
 
 @NgModule({
