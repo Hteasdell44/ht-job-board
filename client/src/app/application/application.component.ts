@@ -46,7 +46,7 @@ export class ApplicationComponent {
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private decimalPipe: DecimalPipe, private authService: AuthService, private formBuilder: FormBuilder) {
     const id = this.route.snapshot.paramMap.get('id');
-    this.http.get<Job>(`http://localhost:3001/jobs/${id}`).subscribe(response => {
+    this.http.get<Job>(`/jobs/${id}`).subscribe(response => {
       this.currentJob = response;
     });
 
@@ -67,7 +67,7 @@ export class ApplicationComponent {
 
     this.authService.getCurrentUser().subscribe(applicant => {
 
-      this.http.get<any>(`http://localhost:3001/company/${this.route.snapshot.paramMap.get('id')}`).subscribe(company => {
+      this.http.get<any>(`/company/${this.route.snapshot.paramMap.get('id')}`).subscribe(company => {
 
           const formData = new FormData();
           formData.append('emailAddress', form.form.value.email);

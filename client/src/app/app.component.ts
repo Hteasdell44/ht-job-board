@@ -41,7 +41,7 @@ export class AppComponent {
       
       this.authService.getCurrentUser().subscribe(user => {
         if (user) {
-          window.location.assign('company/login')
+          window.location.assign('/company/login')
         }
       });
 

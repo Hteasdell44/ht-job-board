@@ -55,7 +55,7 @@ export class AddJobComponent {
 
     const requestBody = { companyId, jobTitle, salary, city, jobDescription };
 
-      this.http.post<any>(`http://localhost:3001/company/addJob`, requestBody).subscribe(response => {
+      this.http.post<any>(`/company/addJob`, requestBody).subscribe(response => {
 
       console.log(company);
 

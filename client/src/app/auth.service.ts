@@ -11,7 +11,7 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   login(email: string, password: string): Observable<any> {
-    return this.http.post('http://localhost:3001/login', { email, password });
+    return this.http.post('/login', { email, password });
   }
 
   logout(): void {
@@ -28,7 +28,7 @@ export class AuthService {
     const token = localStorage.getItem('token');
     if (token) {
       // Make an authenticated request to the backend to retrieve the current user's data
-      return this.http.get<any>('http://localhost:3001/applicant/me', {
+      return this.http.get<any>('/applicant/me', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -47,7 +47,7 @@ export class AuthService {
     const token = localStorage.getItem('token');
     if (token) {
       // Make an authenticated request to the backend to retrieve the current user's data
-      return this.http.get<any>('http://localhost:3001/company/me', {
+      return this.http.get<any>('/company/me', {
         headers: {
           Authorization: `Bearer ${token}`
         }

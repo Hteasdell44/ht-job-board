@@ -38,7 +38,7 @@ export class CompanyDetailsComponent {
 
     const id = this.route.snapshot.paramMap.get('id');
 
-    this.http.get<Company>(`http://localhost:3001/company/current/${id}`).subscribe(response => {
+    this.http.get<Company>(`/company/current/${id}`).subscribe(response => {
       console.log(response);
       this.currentCompany = response;
     });

@@ -56,7 +56,7 @@ export class ProfileComponent {
           Authorization: `Bearer ${localStorage.getItem('token')}` // Add the token to the Authorization header
         };
     
-        this.http.post<any>('http://localhost:3001/applicant/removeFromWishList', requestBody, { headers }).subscribe(response => {
+        this.http.post<any>('/applicant/removeFromWishList', requestBody, { headers }).subscribe(response => {
           console.log(response);
           window.location.reload();
         });

@@ -42,7 +42,7 @@ export class CompanyLoginComponent {
 
     const requestBody = { email, password };
 
-    this.http.post<any>('http://localhost:3001/company/login', requestBody).subscribe(response => {
+    this.http.post<any>('/company/login', requestBody).subscribe(response => {
 
       console.log(response);
       localStorage.setItem('token', response.token);

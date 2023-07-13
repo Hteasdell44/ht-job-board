@@ -50,12 +50,12 @@ export class JobDetailsComponent {
 
   constructor(private http: HttpClient, private route: ActivatedRoute, private decimalPipe: DecimalPipe, private authService: AuthService) {
     const id = this.route.snapshot.paramMap.get('id');
-    this.http.get<Job>(`http://localhost:3001/jobs/${id}`).subscribe(response => {
+    this.http.get<Job>(`/jobs/${id}`).subscribe(response => {
       this.currentJob = response;
       console.log(response)
     });
 
-    this.http.get<Company>(`http://localhost:3001/company/${id}`).subscribe(response => {
+    this.http.get<Company>(`/company/${id}`).subscribe(response => {
       this.currentCompany = response;
     });
   }
@@ -73,7 +73,7 @@ export class JobDetailsComponent {
 
         if (applicant) {
 
-          window.location.assign(`jobs/${this.currentJob?.id}/apply`)
+          window.location.assign(`/jobs/${this.currentJob?.id}/apply`)
 
         }
       });
@@ -87,7 +87,7 @@ export class JobDetailsComponent {
 
         } else {
 
-          window.location.assign(`jobs/${this.currentJob?.id}/apply`)
+          window.location.assign(`/jobs/${this.currentJob?.id}/apply`)
 
         }
       });
@@ -129,7 +129,7 @@ export class JobDetailsComponent {
           Authorization: `Bearer ${localStorage.getItem('token')}` // Add the token to the Authorization header
         };
     
-        this.http.post<any>('http://localhost:3001/applicant/addToWishList', requestBody, { headers }).subscribe(response => {
+        this.http.post<any>('/applicant/addToWishList', requestBody, { headers }).subscribe(response => {
           console.log(response);
           this.addedToWishList = "Added To Your List ❤️";
         });

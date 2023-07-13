@@ -25,7 +25,7 @@ export class CompanySignupComponent {
 
     const requestBody = { companyName, email, password, passwordConfirm };
 
-    this.http.post<any>('http://localhost:3001/company/signup', requestBody).subscribe(response => {
+    this.http.post<any>('/company/signup', requestBody).subscribe(response => {
 
       console.log(response);
       localStorage.setItem('token', response.token);

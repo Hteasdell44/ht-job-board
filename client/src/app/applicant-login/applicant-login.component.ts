@@ -22,7 +22,7 @@ export class ApplicantLoginComponent {
 
     const requestBody = { email, password };
 
-    this.http.post<any>('http://localhost:3001/applicant/login', requestBody).subscribe(response => {
+    this.http.post<any>('/applicant/login', requestBody).subscribe(response => {
 
       console.log(response);
       localStorage.setItem('token', response.token);

@@ -25,7 +25,7 @@ export class CompaniesComponent {
 
   constructor(private http: HttpClient, private decimalPipe: DecimalPipe) {
 
-    this.http.get<any[]>('http://localhost:3001/company/companies').subscribe(response => {
+    this.http.get<any[]>('/company/companies').subscribe(response => {
       this.companies = response;
     });
 
@@ -38,7 +38,7 @@ export class CompaniesComponent {
     let params = new HttpParams();
     params = params.append('companyName', companyName);
 
-    this.http.get<any[]>('http://localhost:3001/company/search', { params }).subscribe((data) => {
+    this.http.get<any[]>('/company/search', { params }).subscribe((data) => {
 
       this.companies = data;
       this.secondTitle = "Search Results";

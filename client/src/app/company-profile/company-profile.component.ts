@@ -44,7 +44,7 @@ export class CompanyProfileComponent {
           Authorization: `Bearer ${localStorage.getItem('token')}` // Add the token to the Authorization header
         };
     
-        this.http.post<any>('http://localhost:3001/company/deleteJob', requestBody, { headers }).subscribe(response => {
+        this.http.post<any>('/company/deleteJob', requestBody, { headers }).subscribe(response => {
           console.log(response);
           window.location.reload();
         });

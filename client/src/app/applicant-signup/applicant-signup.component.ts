@@ -28,7 +28,7 @@ export class ApplicantSignupComponent {
 
     const requestBody = { firstName, lastName, email, password, passwordConfirm };
 
-    this.http.post<any>('http://localhost:3001/applicant/signup', requestBody).subscribe(response => {
+    this.http.post<any>('/applicant/signup', requestBody).subscribe(response => {
 
       console.log(response);
       localStorage.setItem('token', response.token);
