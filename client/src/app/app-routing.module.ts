@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'signup', component: ApplicantSignupComponent },
   { path: 'login', component: ApplicantLoginComponent },
   { path: 'profile', component: ProfileComponent },    
-  { path: 'jobs/:id', component: JobDetailsComponent },
+  { path: 'jobs/:id/view', component: JobDetailsComponent },
   { path: 'jobs/:id/apply', component: ApplicationComponent },
   { path: 'companies', component: CompaniesComponent },
   { path: 'company/login', component: CompanyLoginComponent },

@@ -16,7 +16,7 @@
 
     <div *ngFor="let job of getPageItems()" class="w-4/5 block m-auto">
 
-        <a href="/jobs/{{ job.id }}" class="w-full block m-auto rounded-3xl text-center border-2 border-black mb-4 bg-gray-200 p-4">
+        <a href="/jobs/{{ job.id }}/view" class="w-full block m-auto rounded-3xl text-center border-2 border-black mb-4 bg-gray-200 p-4">
             <h3 class="font-bold md:text-2xl">{{ job.title }}</h3>
             <p class="md:text-xl">${{ formatSalary(job.salary) }}</p>
             <p class="md:text-xl">📍{{ job.location }}</p>
