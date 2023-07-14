@@ -6,7 +6,7 @@
 
           <div *ngFor="let item of wishList" class="w-4/5 rounded-3xl border-2 border-black p-4 bg-gray-200 relative">
 
-                <a href="/jobs/{{ item.id }}" class="w-full h-full rounded-3xl p-4 relative">
+                <a href="/jobs/{{ item.id }}/view" class="w-full h-full rounded-3xl p-4 relative">
                         <h2 class="font-bold md:text-2xl">{{ item.title }}</h2>
                         <h2 class="md:text-xl"> ${{ formatSalary(item.salary) }} </h2>
                         <h2 class="md:text-xl"> 📍{{item.location}} </h2>

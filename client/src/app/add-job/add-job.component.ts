@@ -65,7 +65,7 @@ export class AddJobComponent {
 
         company.jobListings.push(response.job);
         this.appSubmitted = 'Your Job Was Successfully Posted ☑️';
-        window.location.assign("/company/profile");
+        window.location.assign("/company/profile/view");
       })
 
     });

@@ -19,13 +19,13 @@ const routes: Routes = [
   { path: 'login', component: ApplicantLoginComponent },
   { path: 'profile', component: ProfileComponent },    
   { path: 'jobs/:id/view', component: JobDetailsComponent },
-  { path: 'jobs/:id/apply', component: ApplicationComponent },
+  { path: 'jobs/:id/apply/view', component: ApplicationComponent },
   { path: 'companies', component: CompaniesComponent },
-  { path: 'company/login', component: CompanyLoginComponent },
-  { path: 'company/signup', component: CompanySignupComponent },
-  { path: 'company/profile', component: CompanyProfileComponent },
-  { path: 'company/addJob', component: AddJobComponent },
-  { path: 'company/:id', component: CompanyDetailsComponent },
+  { path: 'company/login/view', component: CompanyLoginComponent },
+  { path: 'company/signup/view', component: CompanySignupComponent },
+  { path: 'company/profile/view', component: CompanyProfileComponent },
+  { path: 'company/addJob/view', component: AddJobComponent },
+  { path: 'company/:id/view', component: CompanyDetailsComponent },
 ];
 
 @NgModule({

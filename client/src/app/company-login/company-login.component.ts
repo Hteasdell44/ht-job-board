@@ -27,7 +27,7 @@ export class CompanyLoginComponent {
 
         } else if (user.role == 'company') {
 
-          window.location.assign('/company/profile')
+          window.location.assign('/company/profile/view')
         }
 
       });
@@ -46,7 +46,7 @@ export class CompanyLoginComponent {
 
       console.log(response);
       localStorage.setItem('token', response.token);
-      window.location.assign('/company/profile');
+      window.location.assign('/company/profile/view');
     
     });
     

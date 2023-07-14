@@ -73,7 +73,7 @@ export class JobDetailsComponent {
 
         if (applicant) {
 
-          window.location.assign(`/jobs/${this.currentJob?.id}/apply`)
+          window.location.assign(`/jobs/${this.currentJob?.id}/apply/view`)
 
         }
       });
@@ -87,7 +87,7 @@ export class JobDetailsComponent {
 
         } else {
 
-          window.location.assign(`/jobs/${this.currentJob?.id}/apply`)
+          window.location.assign(`/jobs/${this.currentJob?.id}/apply/view`)
 
         }
       });

@@ -30,7 +30,7 @@ export class CompanySignupComponent {
       console.log(response);
       localStorage.setItem('token', response.token);
       this.authService.setCurrentUser(response.user);
-      window.location.assign('/company/profile');
+      window.location.assign('/company/profile/view');
     
     });
     

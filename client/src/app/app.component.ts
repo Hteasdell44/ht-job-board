@@ -25,7 +25,7 @@ export class AppComponent {
 
       this.authService.getCurrentCompany().subscribe(user => {
         if (user) {
-          window.location.assign('/company/profile')
+          window.location.assign('/company/profile/view')
         }
       });
     
@@ -41,19 +41,19 @@ export class AppComponent {
       
       this.authService.getCurrentUser().subscribe(user => {
         if (user) {
-          window.location.assign('/company/login')
+          window.location.assign('/company/login/view')
         }
       });
 
       this.authService.getCurrentCompany().subscribe(user => {
         if (user) {
-          window.location.assign('/company/profile')
+          window.location.assign('/company/profile/view')
         }
       });
     
     }
 
-    else { window.location.assign('/company/login') }
+    else { window.location.assign('/company/login/view') }
   }
   
 }
