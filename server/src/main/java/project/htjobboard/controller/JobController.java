@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -28,6 +30,12 @@ public class JobController {
     @GetMapping()
     public List<Job> getAllJobs() {
         return jobRepository.findAll();
+    }
+
+    @GetMapping("/firstFifty")
+    public List<Job> getFirst50Jobs() {
+        Pageable pageable = PageRequest.of(0, 50);
+        return jobRepository.findAll(pageable).getContent();
     }
 
     @GetMapping("/{id}")

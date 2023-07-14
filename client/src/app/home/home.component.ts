@@ -29,7 +29,7 @@ export class HomeComponent {
 
   constructor(private http: HttpClient, private decimalPipe: DecimalPipe, private formBuilder: FormBuilder) {
 
-    this.http.get<any[]>('/jobs').subscribe(response => {
+    this.http.get<any[]>('/jobs/firstFifty').subscribe(response => {
       this.jobs = response;
     });
 
