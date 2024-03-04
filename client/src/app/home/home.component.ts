@@ -29,7 +29,7 @@ export class HomeComponent {
 
   constructor(private http: HttpClient, private decimalPipe: DecimalPipe, private formBuilder: FormBuilder) {
 
-    this.http.get<any[]>('http://localhost:3001/jobs').subscribe(response => {
+    this.http.get<any[]>('/.netlify/functions/getJobs').subscribe(response => {
       this.jobs = response;
     });
 
