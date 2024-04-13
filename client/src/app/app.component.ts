@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HomeComponent } from './home/home.component';
 import { AuthService } from './auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent {
 
   logoPath = '../assets/logo.png';
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   handleAccountClick(): void {
 
@@ -19,19 +20,19 @@ export class AppComponent {
       
       this.authService.getCurrentUser().subscribe(user => {
         if (user) {
-          window.location.assign('/profile')
+          this.router.navigate(['/profile']);
         }
       });
 
       this.authService.getCurrentCompany().subscribe(user => {
         if (user) {
-          window.location.assign('/company/profile/view')
+          this.router.navigate(['/company/profile/view']);
         }
       });
     
     }
 
-    else { window.location.assign('/login') }
+    else { this.router.navigate(['/login']) }
 
   }
 
@@ -41,19 +42,19 @@ export class AppComponent {
       
       this.authService.getCurrentUser().subscribe(user => {
         if (user) {
-          window.location.assign('/company/login/view')
+          this.router.navigate(['/company/login/view']);
         }
       });
 
       this.authService.getCurrentCompany().subscribe(user => {
         if (user) {
-          window.location.assign('/company/profile/view')
+          this.router.navigate(['/company/profile/view']);
         }
       });
     
     }
 
-    else { window.location.assign('/company/login/view') }
+    else { this.router.navigate(['/company/login/view']) }
   }
   
 }
